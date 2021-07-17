@@ -86,7 +86,7 @@ export default function Projects() {
                     <p className='technologies'>React</p>
                     <p className='technologies'>CSS</p>
                     </div>
-                    <a className='link' href='https://github.com/rinalditomas/ShoppingList-App' >Check the code</a>
+                    <a className='link' href='https://github.com/rinalditomas/portfolio' >Check the code</a>
             </div>
 
             
