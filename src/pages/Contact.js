@@ -11,8 +11,8 @@ export default function Home() {
         <div>
           <form action="https://formspree.io/f/myyldngz" method="post" >
             <input type='text' placeholder='Full name' />
-            <input type='email' placeholder='Email'/>
-            <textarea  placeholder='Write your message here'style={{height:150}} />
+            <input type='email'  name="_replyto" placeholder='Email'/>
+            <textarea  placeholder='Write your message here'style={{height:150}}name="message" />
             <input type='submit'  value='Submit' />
           </form>
         </div>
