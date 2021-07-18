@@ -33,8 +33,7 @@
     font-family:sans-serif;
   flex-direction: column;
   box-shadow: 14px 2px 20px #cbced1,
-  -14px -14px 20px white;
-
+  -14px -14px 20px white
 }
 .paragraph{
 display: none;
@@ -170,7 +169,7 @@ text-align: center;
       height: 8em;
       padding:1em;
       border-radius:10px;
-      color:#fff;
+      color:black;
       display:flex;
       align-items:center;
       justify-content:center;
