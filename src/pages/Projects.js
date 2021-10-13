@@ -26,7 +26,7 @@ export default function Projects() {
             <a className="link" href="https://github.com/rinalditomas/movieDB">
               Check the code
             </a>
-            <a className="link" href="https://app.netlify.com/sites/new-movie-db/overview">
+            <a className="link" href="https://new-movie-db.netlify.app">
               Check the page
             </a>
           </div>
