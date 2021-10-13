@@ -16,7 +16,7 @@ export default function Projects() {
 
             <p className="paragraph">
               Netflix clone using an API from 'The Movie DB'. This is v 1.0, I'm
-              working in the v 2.0{" "}
+              working on  v 2.0{" "}
             </p>
             <div className="tech-box">
               <p className="technologies">Javascript</p>
