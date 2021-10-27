@@ -9,6 +9,12 @@
   text-align: left;
   margin: 4em;
 }
+.title{
+  margin-top: 5rem;
+}
+.content{
+  margin-top: 5rem;
+}
 
 
 
@@ -22,45 +28,7 @@
 
 
   }
-  .grid{
-    grid-template-columns: 25em ;
-    grid-row-gap: 3em;
-  
-  }
-  .item1{
-      height: 8em;
-      padding:1em;
-      border-radius:10px;
-      color:black;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:40px;
-      font-family:sans-serif;
-      flex-direction: column;
-  }
-  .paragraph{
-    font-size: 0.4em;
-    font-weight:100;
-    }
 
-    .technologies{
-      margin: 1.5em 0.5em;
-      display:none;
-      font-size: 0.2em;
-      font-weight: bold;
-      color:#FFCB00;
-      
-    }
-    .project-title{
-      font-size: 1.3em;
-     
-    }
-    .link{
-      font-size: 0.3em;
-      border-radius: 1em;
-      padding: 10px 15px;
-    }
 }
 
 
