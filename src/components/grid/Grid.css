@@ -1,0 +1,96 @@
+.grid {
+  display: grid;
+  grid-template-columns:repeat(2,400px);
+  grid-template-rows: repeat(3,340px);
+  gap: 25px 25px;
+}
+.project {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 340px;
+  border-radius: 8px;
+  box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04),
+    0 3px 6px 0 rgba(25, 32, 36, 0.16);
+    transition: transform 450ms;
+}
+.display {
+  display: none;
+}
+.project:hover .display {
+  display: block;
+  margin-bottom: 10px;
+}
+.project:hover .project-title {
+  display: none;
+}
+.project:hover {
+  border: 1px solid #363f45;
+  transform: scale(1.08);
+}
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #192024;
+}
+
+.information {
+  font-size: 16px;
+  width: 80%;
+  font-weight: normal;
+  color: #192024;
+}
+.stack {
+
+  width: 80%;
+  font-size: 14px;
+  font-weight: normal;
+  color: #5a6872
+}
+
+.link {
+  border: 1px solid #FFCB00;
+  border-radius: 10px;
+  padding: 7px 14px;
+  background-color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  color: #192024;
+  cursor: pointer;
+}
+.link:hover{
+    background: #FFCB00;
+    color: white;
+    
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .grid{
+
+        grid-template-columns: repeat(1,400px);
+        grid-template-rows: repeat(3,340px);
+        gap: 25px 25px;
+    }
+ 
+}
+@media screen and (max-width: 450px) {
+
+    .grid{
+
+        grid-template-columns: repeat(1,300px);
+        grid-template-rows: repeat(3,240px);
+        gap: 25px 25px;
+    }
+    .project {
+     
+        width: 300px;
+        height: 240px;
+    }
+ 
+}

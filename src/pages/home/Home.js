@@ -17,7 +17,7 @@ export default function Home() {
             />
           </div>
           <h1>
-            Hi! I’m Tomas.<br />I'm a full stack developer.
+            Hi! I’m Tomas.<br />I'm a Front-end developer.
           </h1>
           <div className='socialMedia'>
           <a href='https://www.linkedin.com/in/tomas-rinaldi-b4745b86/'><i className="fab fa-linkedin" ></i></a>

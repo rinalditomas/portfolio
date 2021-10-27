@@ -1,6 +1,8 @@
 import React from "react";
 import "./Project.css";
 import Fade from "react-reveal/Fade";
+import { projectList } from "../../constants/ProjectList";
+import Grid from "../../components/grid/Grid";
 
 export default function Projects() {
   return (
@@ -10,13 +12,21 @@ export default function Projects() {
           <h1>Projects</h1>
           <i className="far fa-file-code"></i>
         </div>
-        <div className="grid">
+          <div className="contetn">
+                <Grid />
+          </div>
+      </Fade>
+    </div>
+  );
+}
+
+{/* <div className="grid">
           <div className="item1">
             <h1 className="project-title">MovieDB</h1>
 
             <p className="paragraph">
               Netflix clone using an API from 'The Movie DB'. This is v 1.0, I'm
-              working on  v 2.0{" "}
+              working on v 2.0{" "}
             </p>
             <div className="tech-box">
               <p className="technologies">Javascript</p>
@@ -134,8 +144,4 @@ export default function Projects() {
               Check the code
             </a>
           </div>
-        </div>
-      </Fade>
-    </div>
-  );
-}
+        </div> */}

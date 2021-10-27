@@ -3,10 +3,10 @@ import { Switch, Route } from "react-router";
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Projects from './pages/Projects'
+import Home from './pages/home/Home'
+import About from './pages/about/About'
+import Contact from './pages/contact/Contact'
+import Projects from './pages/projects/Projects'
 import "./App.css";
 
 
