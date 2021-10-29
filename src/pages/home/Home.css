@@ -1,30 +1,28 @@
-
-.home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.home h1{
+.home h1 {
   position: absolute;
 }
-.socialMedia{
+.socialMedia {
   margin-top: 1em;
   position: relative;
   font-size: 3em;
 }
-.fa-github{
+.fa-github {
   margin-left: 2em;
   color: black;
 }
-.fa-linkedin{
-  color:#0072b1
-  
+.fa-linkedin {
+  color: #0072b1;
 }
 
 .home-background img {
-  width: 500px;
+  width: 31.25rem;
   height: auto;
   animation: move 10s linear infinite;
 }
@@ -49,17 +47,12 @@
   }
 }
 
-
-
 @media screen and (max-width: 960px) {
-
- 
-
-  .fa-github{
+  .fa-github {
     margin-left: 1em;
   }
   .home-background img {
-    width: 300px;
+    width: 18.75rem;
   }
 
   @keyframes move {
@@ -82,11 +75,4 @@
       transform: scale(1) translate(-20vw, 5vh);
     }
   }
-
- 
-
- 
-
 }
-
-

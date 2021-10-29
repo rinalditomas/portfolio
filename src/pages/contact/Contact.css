@@ -1,38 +1,30 @@
-
-.contact{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- text-align: center;
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-input[type=text],input[type=email], textarea{
+input[type="text"],
+input[type="email"],
+textarea {
   padding: 1em;
   border-radius: 1em;
   width: 80%;
   margin-top: 1em;
-  border: 2px solid rgb(160, 158, 158);  
+  border: 2px solid rgb(160, 158, 158);
   border: 1;
   resize: vertical;
 }
-input[type=submit]{
+input[type="submit"] {
   margin: 1em 1em;
   width: 80%;
-  padding: 12px 20px;
-  border: solid #FFCB00;
-  color: #FFCB00;
+  padding: 0.75rem 1.25rem;
+  border: solid #ffcb00;
+  color: #ffcb00;
   font-weight: bold;
   font-size: 1em;
   border-radius: 1em;
   cursor: pointer;
   background-color: transparent;
 }
-
-
-@media screen and (max-width: 960px) {
-  .contact{
-
-  }
-}
-
-

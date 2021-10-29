@@ -1,41 +1,36 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Raleway", sans-serif;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 h1 {
-    font-size: 4em;
-  }
-a{
+  font-size: 4em;
+}
+a {
   text-decoration: none;
 }
-span{
-  color:#FFCB00
+span {
+  color: #ffcb00;
 }
 
-.footer-container{
+.footer-container {
   margin-top: 3em;
 }
 
-.fa-comment, .fa-file-code, .fa-laugh-beam{
+.fa-comment,
+.fa-file-code,
+.fa-laugh-beam {
   font-size: 3em;
   margin-left: 0.5em;
 }
 
-
 @media screen and (max-width: 960px) {
-
-  h1{
+  h1 {
     font-size: 3em;
   }
-
-
 }
-
-
