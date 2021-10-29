@@ -1,7 +1,6 @@
 import React from "react";
-import "./Footer.css";
 import { TEXT } from "../../constants/ProjectList";
-
+import './Footer.css'
 export default function Footer() {
   const {title, name} = TEXT.FOOTER
   return (
