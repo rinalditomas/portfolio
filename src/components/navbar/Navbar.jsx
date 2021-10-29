@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { TEXT, projectList } from "../../constants/ProjectList";
+import { TEXT } from "../../constants/ProjectList";
 
 const Navbar = ({ ABOUT, HOME, CONTACT, PROJECTS }) => {
   const [showMenu, setShowMenu] = useState(false);

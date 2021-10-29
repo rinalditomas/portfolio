@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import { TEXT } from "../../constants/ProjectList";
 
 export default function About() {
-  const { title, presentation, action } = TEXT.ABOUT;
+  const { title, action } = TEXT.ABOUT;
 
   return (
     <div className="about">
