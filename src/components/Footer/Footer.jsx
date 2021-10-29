@@ -1,6 +1,6 @@
 import React from "react";
 import { TEXT } from "../../constants/ProjectList";
-import '../Footer/Footer.css'
+import '../../../src/components/Footer/Footer.css'
 
 
 export default function Footer() {
