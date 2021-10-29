@@ -5,9 +5,6 @@
  align-items: center;
  justify-content: center;
  text-align: center;
- margin: -4em auto auto;
- max-width: 70%;
- height: 90vh;
 }
 input[type=text],input[type=email], textarea{
   padding: 1em;
@@ -34,8 +31,7 @@ input[type=submit]{
 
 @media screen and (max-width: 960px) {
   .contact{
-    margin: -8em auto;
-    max-width: 100%;
+
   }
 }
 

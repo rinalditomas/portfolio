@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 
 
 
-export default function Contact() {
+export default function About() {
 
   return (
 

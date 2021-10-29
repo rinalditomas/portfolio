@@ -1,12 +1,9 @@
 
 .home{
-    margin: -5em auto auto;
     display: flex;
     flex-direction: column;
-    height: 90vh;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .home h1{
@@ -56,13 +53,7 @@
 
 @media screen and (max-width: 960px) {
 
-  .home{
-    margin: -8em 2em auto;
-  }
-
-  .socialMedia{
-    margin-top: 2em;
-  }
+ 
 
   .fa-github{
     margin-left: 1em;

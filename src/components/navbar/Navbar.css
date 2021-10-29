@@ -96,6 +96,7 @@
       width: 100%;
       display: table;
       transition: transform 450ms;
+      margin-bottom: 7rem;
     }
   
     .nav-links:hover {
