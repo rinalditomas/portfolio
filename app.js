@@ -61,10 +61,9 @@ const CONTENT = {
       sub: "Tell me a little about your business and what you'd like to build. I usually reply within a day.",
       whatsapp: "Message on WhatsApp",
       email: "Send an email",
-      visit: "Visit site",
       form: { name: "Your name", email: "Email", company: "Company (optional)", message: "What do you need?", messagePlaceholder: "A website, an automation, a tool to manage…", send: "Send message" },
     },
-    footer: { tagline: "Software for small and growing businesses." },
+    footer: { tagline: "Software for growing businesses." },
   },
 
   es: {
@@ -76,7 +75,7 @@ const CONTENT = {
       chips: ["Web", "Automatización", "Herramientas internas", "Mantenimiento"],
     },
     heroBold: {
-      title: ["Menos trabajo manual.", "Más negocio."],
+      title: ["Menos tareas repetitivas.", "Más negocio."],
       sub: "Sitios que traen clientes, automatizaciones que te ahorran tiempo y herramientas que por fin ponen todo en un solo lugar.",
       kicker: "Presupuestos fijos · trato directo · soporte después del lanzamiento.",
     },
@@ -85,8 +84,8 @@ const CONTENT = {
       title: "Cuatro formas de ayudar a tu negocio.",
       items: [
         { n: "01", title: "Sitios web y presencia online", short: "Sitios web", desc: "Sitios rápidos y modernos que dan credibilidad a un negocio — landing pages, sitios de empresa, reservas y contacto.", tags: ["Landing pages", "Sitios de empresa", "SEO básico"] },
-        { n: "02", title: "Automatización", short: "Automatización", desc: "Scripts e integraciones que eliminan el trabajo repetitivo — conectan tus herramientas, sincronizan datos y trabajan mientras dormís.", tags: ["Integraciones", "Scripts", "Sincronización"] },
-        { n: "03", title: "Software de gestión", short: "Software de gestión", desc: "Herramientas internas a medida, pensadas para cómo trabaja tu equipo — inventario, clientes, agenda, tableros.", tags: ["Tableros", "Herramientas internas", "Bases de datos"] },
+        { n: "02", title: "Automatización", short: "Automatización", desc: "Scripts e integraciones que eliminan el trabajo repetitivo — conectan tus herramientas, sincronizan datos y trabajan mientras duermes.", tags: ["Integraciones", "Scripts", "Sincronización"] },
+        { n: "03", title: "Software de gestión", short: "Software de gestión", desc: "Herramientas internas a medida, pensadas para la forma en que trabaja tu equipo — inventario, clientes, agenda, tableros.", tags: ["Tableros", "Herramientas internas", "Bases de datos"] },
         { n: "04", title: "Mantenimiento y soporte", short: "Mantenimiento", desc: "Cuidado continuo para que todo siga funcionando — actualizaciones, arreglos, mejoras y alguien a quien llamar.", tags: ["Actualizaciones", "Arreglos", "Disponible"] },
       ],
     },
@@ -104,20 +103,19 @@ const CONTENT = {
         { n: "01", title: "Hablamos", desc: "Una charla corta para entender el problema y qué sería un buen resultado." },
         { n: "02", title: "Presupuesto", desc: "Un plan claro con precio fijo y plazo — sin sorpresas." },
         { n: "03", title: "Construyo", desc: "Trabajo a la vista, compartiendo avances para que nunca estés a ciegas." },
-        { n: "04", title: "Lanzamiento y soporte", desc: "Salimos en vivo y me quedo para que todo siga funcionando." },
+        { n: "04", title: "Lanzamiento y soporte", desc: "Sale a producción y me quedo para que todo siga funcionando." },
       ],
     },
     contact: {
       label: "Contacto",
-      title: "¿Tenés algo en mente?",
+      title: "¿Tienes algo en mente?",
       bandTitle: "¿Listo para sacarte trabajo de encima?",
-      sub: "Contame un poco sobre tu negocio y qué te gustaría construir. Suelo responder en el día.",
+      sub: "Cuéntame un poco sobre tu negocio y qué te gustaría construir. Suelo responder en el día.",
       whatsapp: "Escribir por WhatsApp",
       email: "Enviar un email",
-      visit: "Ver sitio",
-      form: { name: "Tu nombre", email: "Email", company: "Empresa (opcional)", message: "¿Qué necesitás?", messagePlaceholder: "Un sitio web, una automatización, una herramienta para gestionar…", send: "Enviar mensaje" },
+      form: { name: "Tu nombre", email: "Email", company: "Empresa (opcional)", message: "¿Qué necesitas?", messagePlaceholder: "Un sitio web, una automatización, una herramienta para gestionar…", send: "Enviar mensaje" },
     },
-    footer: { tagline: "Software para negocios pequeños y en crecimiento." },
+    footer: { tagline: "Software para negocios en crecimiento." },
   },
 };
 
@@ -217,7 +215,6 @@ function render(lang) {
                   <h3 class="bwork-name">${esc(w.name)}</h3>
                   <p class="bwork-desc">${esc(w.desc)}</p>
                   <span class="bwork-res"><span class="bdot"></span> ${esc(w.result)}</span>
-                  ${w.url ? `<a class="bwork-link" href="${esc(w.url)}" target="_blank" rel="noopener">${esc(c.contact.visit)} <span class="arw" aria-hidden="true">↗</span></a>` : ""}
                 </div>
               </div>`;
             }).join("")}

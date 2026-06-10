@@ -113,10 +113,6 @@ a { color: inherit; text-decoration: none; }
 .bwork-res .bdot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 .bwork-shot { transition: transform .18s; }
 a:hover > .bwork-shot { transform: translateY(-3px); }
-.bwork-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; font-weight: 700; color: var(--accent); border-bottom: 2px solid transparent; padding-bottom: 2px; transition: border-color .15s; }
-.bwork-link:hover { border-color: var(--accent); }
-.bwork-link .arw { transition: transform .2s; }
-.bwork-link:hover .arw { transform: translate(2px, -2px); }
 
 /* CTA band */
 .bband { background: var(--accent); color: var(--accent-ink); }

@@ -1,0 +1,5 @@
+# Static site — no build step. Publish the repo root as-is.
+# This overrides any build command/publish dir left over from the old React setup.
+[build]
+  publish = "."
+  command = ""
