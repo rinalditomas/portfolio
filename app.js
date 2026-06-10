@@ -123,12 +123,53 @@ const CONTENT = {
 const esc = (s) => String(s).replace(/[&<>"']/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
 const arrow = `<svg width="17" height="17" viewBox="0 0 16 16" fill="none" class="arw" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
+// Language: use a stored choice if present, otherwise detect from the browser
+// (Spanish browsers get ES, everyone else EN). The visitor can still override.
 function getLang() {
-  try { return localStorage.getItem(LANG_KEY) || "en"; } catch (e) { return "en"; }
+  try {
+    const stored = localStorage.getItem(LANG_KEY);
+    if (stored === "en" || stored === "es") return stored;
+  } catch (e) {}
+  const nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+  return nav.startsWith("es") ? "es" : "en";
 }
 function setLang(l) {
   try { localStorage.setItem(LANG_KEY, l); } catch (e) {}
   render(l);
+}
+
+// Theme: stored choice wins, else follow the device's prefers-color-scheme.
+const THEME_KEY = "tr_theme";
+function getTheme() {
+  try {
+    const s = localStorage.getItem(THEME_KEY);
+    if (s === "light" || s === "dark") return s;
+  } catch (e) {}
+  return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+}
+function applyTheme(t, animate) {
+  const el = document.documentElement;
+  if (animate) {
+    el.classList.add("theme-anim");
+    window.setTimeout(() => el.classList.remove("theme-anim"), 420);
+  }
+  el.dataset.theme = t;
+}
+function setTheme(t) {
+  try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
+  applyTheme(t, true);
+}
+function toggleTheme() {
+  const cur = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  setTheme(cur === "dark" ? "light" : "dark");
+}
+// Follow the OS theme live, but only until the visitor picks one explicitly.
+if (window.matchMedia) {
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    let stored = null;
+    try { stored = localStorage.getItem(THEME_KEY); } catch (err) {}
+    if (stored !== "light" && stored !== "dark") applyTheme(e.matches ? "dark" : "light", true);
+  });
 }
 
 function waLink(lang) {
@@ -158,6 +199,12 @@ function render(lang) {
       <div class="bwrap bnav-in">
         <a href="#top" class="bbrand">${esc(CONFIG.name)}</a>
         <div class="bnav-right">
+          <button class="btheme" type="button" data-theme-toggle aria-label="${lang === "es" ? "Cambiar tema" : "Toggle theme"}">
+            <span class="btheme-thumb">
+              <svg class="b-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 1.5v2.2M12 20.3v2.2M3.5 3.5l1.6 1.6M18.9 18.9l1.6 1.6M1.5 12h2.2M20.3 12h2.2M3.5 20.5l1.6-1.6M18.9 5.1l1.6-1.6"/></svg>
+              <svg class="b-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+            </span>
+          </button>
           <div class="blang">
             <button data-lang="en" class="${lang === "en" ? "on" : ""}">EN</button>
             <button data-lang="es" class="${lang === "es" ? "on" : ""}">ES</button>
@@ -252,7 +299,7 @@ function render(lang) {
             <p class="bcontact-sub">${esc(c.contact.sub)}</p>
             <div class="bcontact-direct">
               <a class="bbtn bbtn-wa" href="${wa}">${esc(c.contact.whatsapp)}</a>
-              <a class="bbtn bbtn-ghost" style="color: var(--paper); border-color: oklch(0.4 0.01 90)" href="${mail}">${esc(c.contact.email)}</a>
+              <a class="bbtn bbtn-ghost" style="color: var(--on-dark); border-color: oklch(0.45 0.01 90)" href="${mail}">${esc(c.contact.email)}</a>
             </div>
           </div>
           <form class="bform" id="bform">
@@ -290,6 +337,10 @@ function render(lang) {
     btn.addEventListener("click", () => setLang(btn.dataset.lang));
   });
 
+  // wire theme toggle
+  const themeBtn = root.querySelector("[data-theme-toggle]");
+  if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
+
   // wire contact form → opens the visitor's email app
   const form = document.getElementById("bform");
   form.addEventListener("submit", (e) => {
@@ -303,4 +354,5 @@ function render(lang) {
   });
 }
 
+applyTheme(getTheme(), false);
 render(getLang());
