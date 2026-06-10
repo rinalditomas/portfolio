@@ -1,5 +1,7 @@
-# Static site — no build step. Publish the repo root as-is.
-# This overrides any build command/publish dir left over from the old React setup.
+# Static site — no build step needed.
+# An explicit (no-op) command + publish dir so this file fully overrides the
+# leftover Create React App settings in the Netlify UI, which still expected a
+# `build/` directory that no longer exists.
 [build]
+  command = "echo 'No build step — static site.'"
   publish = "."
-  command = ""
